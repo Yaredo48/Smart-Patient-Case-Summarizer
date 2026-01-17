@@ -43,7 +43,7 @@ class PatientBase(BaseModel):
     gender: Optional[str] = None
     phone: Optional[str] = None
     email: Optional[EmailStr] = None
-    metadata: Optional[dict] = None
+    patient_metadata: Optional[dict] = None  # Renamed from metadata
 
 
 class PatientCreate(PatientBase):
@@ -57,7 +57,7 @@ class PatientUpdate(BaseModel):
     gender: Optional[str] = None
     phone: Optional[str] = None
     email: Optional[EmailStr] = None
-    metadata: Optional[dict] = None
+    patient_metadata: Optional[dict] = None  # Renamed from metadata
 
 
 class PatientResponse(PatientBase):

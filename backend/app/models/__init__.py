@@ -34,7 +34,7 @@ class Patient(Base):
     gender = Column(String(20))
     phone = Column(String(20))
     email = Column(String(255))
-    metadata = Column(JSON)
+    patient_metadata = Column(JSON)  # Renamed from 'metadata' to avoid SQLAlchemy conflict
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
     
